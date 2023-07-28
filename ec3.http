@@ -4,23 +4,28 @@
 ##@server = https://teoo01p-expert-space-spork-9rr99766gv6fpx6g-8080.preview.app.github.dev
 
 @server=https://ec03teodora.onrender.com
-
+@api={{server}}/api/ec3
 ###
 
 GET {{server}}/
 
 ###
-GET {{server}}/categorias
+GET {{api}}/categorias
 
 ###
-POST {{server}}/categorias
+
+
+GET {{server}}/categorias
+
+##
+POST {{api}}/categorias
 Content-Type: application/json
 
 {"nombre": "Articulos de limpieza"}
 
 
 ###
-PATCH {{server}}/categorias/2
+PATCH {{api}}/categorias/2
 Content-Type: application/json
 
 {"nombre": "Articulos de cocina"}
@@ -29,28 +34,24 @@ Content-Type: application/json
 
 ###
 
-GET {{server}}/instrumentos
+GET {{api}}/instrumentos
 
 
 ###
-GET {{server}}/instrumentos?size=2&page=3
+GET {{api}}/instrumentos?size=2&page=3
 
 
 ##########
 
-GET {{server}}/instrumentos
+GET {{api}}/instrumentos
 
 ###
 
-POST {{server}}/instrumentos
+POST {{api}}/instrumentos
 Content-Type: application/json
 
 {"nombre": "Jabon"}
 
 ##########
 
-GET {{server}}/categorias/1/instrumentos
-
-##########
-
-GET {{server}}/cursos/6/carrera
+GET {{api}}/categorias/1/instrumentos
