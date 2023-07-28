@@ -1,0 +1,49 @@
+
+
+
+@server = https://teoo01p-expert-space-spork-9rr99766gv6fpx6g-8080.preview.app.github.dev
+
+
+###
+
+GET {{server}}/
+
+###
+GET {{server}}/categorias
+
+###
+POST {{server}}/categorias
+Content-Type: application/json
+
+{"nombre": "Articulos de limpieza"}
+
+
+###
+PATCH {{server}}/categorias/2
+Content-Type: application/json
+
+{"nombre": "Articulos de cocina"}
+
+
+###
+GET {{server}}/cursos?size=2&page=0
+
+
+##########
+
+GET {{server}}/carreras
+
+###
+
+POST {{server}}/carreras
+Content-Type: application/json
+
+{"nombre": "Marketing"}
+
+##########
+
+GET {{server}}/carreras/1/cursos
+
+##########
+
+GET {{server}}/cursos/6/carrera

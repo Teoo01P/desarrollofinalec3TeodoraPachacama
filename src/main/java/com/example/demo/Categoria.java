@@ -21,9 +21,9 @@ public class Categoria {
     private Integer id;
     private String nombre;
     
-    @OneToMany(targetEntity = Instrumento.class, mappedBy = "carrera")
+    @OneToMany(targetEntity = Instrumento.class, mappedBy = "categoria")
     @OrderBy("nombre ASC")
-    private Set<Instrumento> cursos = new HashSet<Instrumento>();
+    private Set<Instrumento> instrumentos = new HashSet<Instrumento>();
 
     public Integer getId() {
         return id;
@@ -41,14 +41,15 @@ public class Categoria {
         this.nombre = nombre;
     }
 
-    public Set<Instrumento> getCursos() {
-        return cursos;
+    public Set<Instrumento> getInstrumentos() {
+        return instrumentos;
     }
 
-    public void setCursos(Set<Instrumento> cursos) {
-        this.cursos = cursos;
+    public void setInstrumentos(Set<Instrumento> instrumentos) {
+        this.instrumentos = instrumentos;
     }
 
+  
 
 
     
