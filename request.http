@@ -25,24 +25,30 @@ Content-Type: application/json
 {"nombre": "Articulos de cocina"}
 
 
+
 ###
-GET {{server}}/cursos?size=2&page=0
+
+GET {{server}}/instrumentos
+
+
+###
+GET {{server}}/instrumentos?size=2&page=3
 
 
 ##########
 
-GET {{server}}/carreras
+GET {{server}}/instrumentos
 
 ###
 
-POST {{server}}/carreras
+POST {{server}}/instrumentos
 Content-Type: application/json
 
-{"nombre": "Marketing"}
+{"nombre": "Jabon"}
 
 ##########
 
-GET {{server}}/carreras/1/cursos
+GET {{server}}/categorias/1/instrumentos
 
 ##########
 
